@@ -31,6 +31,7 @@ app.get('/', function (request, response) {
   response.sendFile('index.html');
 });
 app.get('/api/v1/dblist', function (req, res) {
+  console.log('[API call]: /api/v1/dblist');
   VideoModel.find({}, function (err, data) {
     if (err) {
       console.log(err);
